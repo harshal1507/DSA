@@ -1,4 +1,4 @@
-package com.harshal.arrays;
+package com.harshal.algorithms.searching;
 
 import java.util.Arrays;
 
