@@ -8,7 +8,9 @@ public class ArrayBasicQues {
     * 1. swap elements of array
     * 2. find max element of array
     * 3. find max element in a given range
-    * 4. reverse array using swap function
+    * 4. reverse array using swap function - optimized approach - without using another array
+    *    and swap elements in same array, so TC will same and space complexity will be from O(n) to O(1)
+    * 5. pairs in array
     *
     * Note - consider edge cases in all above problems
     *
@@ -26,6 +28,8 @@ public class ArrayBasicQues {
 
         reverse(arr);
         System.out.println(Arrays.toString(arr));
+
+        pairsInArray(arr);
     }
 
     static void swap(int[] arr, int firstIndex, int secondIndex){
@@ -106,6 +110,16 @@ public class ArrayBasicQues {
             swap(arr, firstIndex, lastIndex);
             firstIndex++;
             lastIndex--;
+        }
+    }
+
+    static void pairsInArray(int[] arr){
+        for (int i = 0; i < arr.length; i++) {
+            int current = arr[i];
+            for (int j=i+1; j<arr.length ; j++) {
+                System.out.print("("+current+","+arr[j]+")");
+            }
+            System.out.println();
         }
     }
 }

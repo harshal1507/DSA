@@ -5,6 +5,8 @@ public class Questions {
         System.out.println(isPalindrome("racecar"));
         System.out.println(isPalindrome("code"));
         System.out.println(shortestPath("WNEENESENNN"));
+        compressString("aaaabbbbbccddddd");
+        compressString("abc");
     }
 
     public static boolean isPalindrome(String word){
@@ -33,5 +35,22 @@ public class Questions {
         int X2 = x*x;
         int Y2 = y*y;
         return Math.sqrt(X2 + Y2);
+    }
+
+    // time complexity = O(n) as in both loop only i is changing
+    public static void compressString(String str){
+        StringBuilder compressedString = new StringBuilder();
+        for(int i=0; i<str.length(); i++){
+            Integer counter = 1;
+            while(i < str.length() - 1 && str.charAt(i) == str.charAt(i+1)){
+                counter++;
+                i++;
+            }
+            if(counter>1)
+                compressedString.append(str.charAt(i)).append(counter);
+            else
+                compressedString.append(str.charAt(i));
+        }
+        System.out.println(compressedString);
     }
 }

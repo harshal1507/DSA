@@ -26,6 +26,8 @@ public class ArrayIntro {
             System.out.print(numericArray[i] + ", ");
         }
 
+        System.out.println();
+
         // using enhanced for loop
         for (int element : numericArray) {
             System.out.print(element + ", ");
