@@ -1,6 +1,4 @@
-package com.harshal.arrays.impquestions;
-
-import java.util.Arrays;
+package com.harshal.arrays.imp_questions;
 
 // Time complexity O(n)
 

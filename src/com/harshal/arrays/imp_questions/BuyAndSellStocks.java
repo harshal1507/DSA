@@ -1,4 +1,4 @@
-package com.harshal.arrays.impquestions;
+package com.harshal.arrays.imp_questions;
 
 public class BuyAndSellStocks {
     public static void main(String[] args) {

@@ -5,8 +5,11 @@ import java.util.Arrays;
 public class BubbleSort {
     public static void main(String[] args) {
         int[] numbers = {5,4,1,3,2};
+        int[] arrDescending = {3,6,2,1,8,7,4,5,3,1};
         bubbleSort(numbers);
+        bubbleSortDescending(arrDescending);
         System.out.println(Arrays.toString(numbers));
+        System.out.println(Arrays.toString(arrDescending));
 
     }
 
@@ -36,6 +39,19 @@ public class BubbleSort {
                     swap(numbers,j,j+1);
                 }
             }
+        }
+    }
+
+    public static void bubbleSortDescending(int[] arr){
+        for (int turn = 0; turn < arr.length - 1; turn++) {
+            int flag = 0;
+            for (int j = 0; j < arr.length - turn -1; j++) {
+                if(arr[j] < arr[j+1]){
+                    swap(arr,j,j+1);
+                    flag = 1;
+                }
+            }
+            if (flag==0) break;
         }
     }
 }
